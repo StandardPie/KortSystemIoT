@@ -7,12 +7,12 @@
 #define DATA_FILE "cards.dat"
 
 void display_menu(void) {
-  printf("\nAdmin Menu\n");
-  printf("1. Remote Open Door\n");
-  printf("2. List all cards in system\n");
-  printf("3. Add/remove access\n");
-  printf("4. Exit\n");
-  printf("5. Fake test scan card\n");
+    printf("\nAdmin Menu\n");
+    printf("1. Remote Open Door\n");
+    printf("2. List all cards in system\n");
+    printf("3. Add/remove access\n");
+    printf("4. Exit\n");
+    printf("5. Fake test scan card\n");
 }
 
 void handle_add_remove_access(CardSystem* system) {
@@ -50,37 +50,6 @@ void handle_add_remove_access(CardSystem* system) {
 }
 
 int main(void) {
-CardSystem system;
-card_system_init(&system);
-
-printf("=== Card Access Control System ===\n");
-
-if (card_system_load_from_file(&system, DATA_FILE)) {
-printf("Loaded existing card data.\n");
-} else {
-printf("No existing data found. Starting with empty system.\n");
-}
-
-
-
-
-
-
-
-
-
-
-
-int running = 1;
-while (running) {
-display_menu();
-int choice = get_int_input("Select option:");
-
-
-
-// menu
-
-int main(void) {
   CardSystem system;
   card_system_init(&system);
 
@@ -103,7 +72,6 @@ int main(void) {
         break;
 
       case 2:
-        printf("-------------------------\n");
         printf("\nAll cards in system:\n");
         card_system_list_cards(&system);
         printf("Press Enter to continue:");
@@ -136,7 +104,6 @@ int main(void) {
   }
 
   card_system_free(&system);
-  printf("-------------------------\n");
   printf("Quitting\n");
 
   return 0;
