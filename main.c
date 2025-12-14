@@ -103,9 +103,10 @@ int main(void) {
         break;
 
       case 2:
+        printf("-------------------------\n");
         printf("\nAll cards in system:\n");
         card_system_list_cards(&system);
-        printf("Press Enter to continue...");
+        printf("Press Enter to continue:");
         getchar();
         getchar();
         break;
@@ -123,7 +124,7 @@ int main(void) {
         break;
 
       default:
-        printf("Invalid option. Please try again.\n");
+        printf("Invalid option.\n");
         break;
     }
   }
@@ -135,7 +136,8 @@ int main(void) {
   }
 
   card_system_free(&system);
-  printf("Goodbye!\n");
+  printf("-------------------------\n");
+  printf("Quitting\n");
 
   return 0;
 }

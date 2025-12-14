@@ -6,6 +6,7 @@
 #include <string.h>
 
 void remote_open_door(void) {
+    printf("-------------------------\n");
     printf("Currently lamp is: green\n");
     printf("Door is open for 3 seconds...\n");
     sleep(3);
@@ -18,11 +19,15 @@ void simulate_card_scan(CardSystem* system) {
 
     Card* card = card_system_find_card(system, card_number);
     if (card != NULL && card->has_access) {
+        printf("-------------------------\n");
+        printf("Scan %s\n", card_number);
         printf("Currently lamp is: green\n");
         printf("Access granted! Door is open for 3 seconds...\n");
         sleep(3);
         printf("Door closed.\n");
     } else {
+        printf("-------------------------");
+        printf("Scan %s\n", card_number);
         printf("Currently lamp is: red\n");
         printf("Access denied!\n");
     }
