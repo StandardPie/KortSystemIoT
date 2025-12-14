@@ -4,15 +4,15 @@
 #include <time.h>
 
 typedef struct {
-char card_number[20];
-int has_access;
-time_t added_date;
+	char card_number[20];
+	int has_access;
+	time_t added_date;
 } Card;
 
 typedef struct {
-Card* cards;
-size_t count;
-size_t capacity;
+	Card* cards;
+	size_t count;
+	size_t capacity;
 } CardSystem;
 
 void card_system_init(CardSystem* system);

@@ -15,7 +15,7 @@ void remote_open_door(void) {
 void simulate_card_scan(CardSystem* system) {
     char card_number[20];
     get_string_input("Enter Card: ", card_number, sizeof(card_number));
-    
+
     Card* card = card_system_find_card(system, card_number);
     if (card != NULL && card->has_access) {
         printf("Currently lamp is: green\n");

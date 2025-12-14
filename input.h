@@ -6,6 +6,6 @@
 #include <string.h>
 
 int get_int_input(const char* prompt);
-void get_string_input(const char* prompt, char* buffer, size_t buffer_size );
+void get_string_input(const char* prompt, char* buffer, size_t buffer_size);
 
 #endif
